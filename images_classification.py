@@ -6,14 +6,15 @@ import torch.optim as optim
 from torch.utils.data import DataLoader
 import torchvision.datasets as datasets
 import torchvision.transforms as transforms
-import matplotlib.pyplot as plt 
 import torchvision.models as models
 
-device = torch.device('cuda') #if torch.cuda.is_available())
+#device = torch.device('cuda') #if torch.cuda.is_available())
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 # Transformaciones de datos
 transform = transforms.Compose([
     transforms.Resize((224, 224)),
+    transforms.Grayscale(num_output_channels=3),
     transforms.ToTensor(),
     transforms.Normalize((0.1307,), (0.3081,))
 ])
