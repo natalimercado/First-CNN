@@ -104,4 +104,4 @@ for epoch in range(num_epochs):
     test_loss, test_accuracy = evaluate(model, test_loader, criterion)
 
     print(f'Epoch [{epoch+1}/{num_epochs}]')
-    print(f'Train Loss: {train_loss:.4f} | Train Accuracy: {train_accuracy:.2f
+    print(f'Train Loss: {train_loss:.4f} | Train Accuracy: {train_accuracy:.2f}')
