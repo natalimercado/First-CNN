@@ -9,7 +9,7 @@ import torchvision.transforms as transforms
 import matplotlib.pyplot as plt 
 import torchvision.models as models
 
-device = torch.device('cuda' if torch.cuda.is_available())
+device = torch.device('cuda') #if torch.cuda.is_available())
 
 # Transformaciones de datos
 transform = transforms.Compose([
